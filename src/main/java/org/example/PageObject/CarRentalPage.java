@@ -39,6 +39,12 @@ public class CarRentalPage {
     public static WebElement searchBtn;
     @FindBy(xpath = "//h2[.='Car Rental Without Driver']")
     public static WebElement carRentWithoutDriver;
+    @FindBy(xpath = "//div[.='ProviderProvider']")
+    public static WebElement carProviderBtn;
+    @FindBy(xpath = "//div[@class='css-1dbjc4n r-150rngu r-eqz5dr r-16y2uox r-1wbh5a2 r-1s2bzr4 r-1pxuy4t r-11yh6sk r-1rnoaur r-1sncvnh']//div[@class='css-1dbjc4n r-iphfwy']/div[.='Smart Rent Car Driverless Jakarta9.7']")
+    public static WebElement carProvideOption;
+    @FindBy(xpath = "//div[@class='css-1dbjc4n r-1ihkh82 r-1q2s4rl r-ttdzmv']/div[@class='css-1dbjc4n r-150rngu r-eqz5dr r-16y2uox r-1wbh5a2 r-11yh6sk r-1rnoaur r-1sncvnh']/div[@class='css-1dbjc4n']/div[1]//div[@class='css-18t94o4 css-1dbjc4n r-kdyh1x r-1loqt21 r-10paoce r-1e081e0 r-5njf8e r-1otgn73 r-lrvibr']")
+    public static WebElement continueBtn;
 
     //------------------------------------------------
     public boolean tvlLogo() {
@@ -79,5 +85,14 @@ public class CarRentalPage {
     }
     public boolean carRentResultTitle() {
         return carRentWithoutDriver.isDisplayed();
+    }
+    public void setCarProviderBtn() {
+        carProviderBtn.click();
+    }
+    public void setCarProvideOption() {
+        carProvideOption.click();
+    }
+    public void setContinueBtn() {
+        continueBtn.click();
     }
 }

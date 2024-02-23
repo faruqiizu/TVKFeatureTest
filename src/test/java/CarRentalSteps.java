@@ -54,10 +54,13 @@ public class CarRentalSteps {
 
     @And("User Select Car Provider")
     public void userSelectCarProvider() {
+        carRentalPage.setCarProviderBtn();
+        carRentalPage.setCarProvideOption();
     }
 
     @Then("User Click button Continue in Product Detail")
     public void userClickButtonContinueInProductDetail() {
+        carRentalPage.setContinueBtn();
     }
 
     @And("User Select Pick-up Location in “Rental Office”")
