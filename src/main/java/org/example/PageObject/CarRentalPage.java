@@ -23,6 +23,22 @@ public class CarRentalPage {
     public static WebElement gambirStation;
     @FindBy(xpath = "//h3[.='Car Rental']")
     public static WebElement carRentalTitle;
+    @FindBy(xpath = "//div[@class='css-1dbjc4n r-14lw9ot r-1wh2hl7 r-e65k4z r-b4qz5r r-1d2f490 r-1udh08x r-u8s1d']//div[@class='css-1dbjc4n r-1awozwy r-1vjbqqu r-1naam9t r-sdzlij r-d045u9 r-eqz5dr r-16y2uox r-1472mwg r-1777fci r-1wyvozj r-1pn2ns4 r-u8s1d r-70iriu r-136ojw6']")
+    public static WebElement startDateForRent;
+    @FindBy(xpath = "//div[@class='css-1dbjc4n r-18u37iz r-xyw6el']//div[@class='css-1dbjc4n r-391gc0 r-1loqt21 r-1777fci r-tuq35u r-1otgn73 r-1i6wzkk r-lrvibr']/div[.='9']")
+    public static WebElement startTimeForRent;
+    @FindBy(xpath = "//input[@value='27 February 2024']")
+    public static WebElement endDateBar;
+    @FindBy(xpath = "//input[@value='27 February 2024']")
+    public static WebElement endDateForRent;
+    @FindBy(xpath = "//div[@class='css-1dbjc4n r-obd0qt r-18u37iz r-1h0z5md']/div[7]//input[@class='css-11aywtz r-z2wwpe r-t1w4ow r-1b43r93 r-majxgm r-mabqd8 r-rjixqe r-cwlir5']")
+    public static WebElement endTime;
+    @FindBy(xpath = "//div[@class='css-1dbjc4n r-14lw9ot r-1wh2hl7 r-e65k4z r-b4qz5r r-1udh08x r-u8s1d r-zchlnj']//div[@class='css-1dbjc4n r-1awozwy r-1vjbqqu r-1naam9t r-sdzlij r-d045u9 r-eqz5dr r-16y2uox r-1472mwg r-1777fci r-1wyvozj r-1pn2ns4 r-u8s1d r-70iriu r-136ojw6']")
+    public static WebElement endTimeForRent;
+    @FindBy(xpath = "//div[@class='css-18t94o4 css-1dbjc4n r-kdyh1x r-1loqt21 r-10paoce r-1e081e0 r-5njf8e r-1otgn73 r-lrvibr']")
+    public static WebElement searchBtn;
+    @FindBy(xpath = "//h2[.='Car Rental Without Driver']")
+    public static WebElement carRentWithoutDriver;
 
     //------------------------------------------------
     public boolean tvlLogo() {
@@ -34,11 +50,34 @@ public class CarRentalPage {
     public void setCarRentalMenu() {
         carRentalMenu.click();
     }
+    public void setuRentalLoctJak(String loctJak) {
+        uRentalLoction.sendKeys(loctJak);
+    }
     public void setuRentalLoct() {
         uRentalLoction.click();
+    }
+    public void clickYourRentLoct(String usrName) {
+        uRentalLoction.sendKeys(usrName);
     }
     public void setGambirStation() {
         gambirStation.click();
     }
-
+    public void setDateForRent() {
+        startDateForRent.click();
+    }
+    public void setTimeForRent() {
+        startTimeForRent.click();
+    }
+    public void setEndDateForRent() {
+        endDateForRent.click();
+    }
+    public void setEndTimeForRent() {
+        endTimeForRent.click();
+    }
+    public void setSearchBtn() {
+        searchBtn.click();
+    }
+    public boolean carRentResultTitle() {
+        return carRentWithoutDriver.isDisplayed();
+    }
 }
