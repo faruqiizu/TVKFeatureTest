@@ -59,7 +59,28 @@ public class CarRentalPage {
     public static WebElement contactDetailTitle;
     @FindBy(xpath = "//div[@class='css-1dbjc4n r-tzxfm6']/div[@class='css-1dbjc4n']//div[@class='css-1dbjc4n r-mhe3cw']//div[@class='css-1dbjc4n r-14lw9ot r-kdyh1x r-rs99b7 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1wyyakw']")
     public static WebElement fullNameContDet;
-
+    @FindBy(xpath = "//div[@class='css-1dbjc4n r-18u37iz']//input[@class='css-11aywtz r-13awgt0 r-t1w4ow r-ubezar r-135wba7 r-bcqeeo r-1ny4l3l r-10paoce r-edyy15 r-13n6l4s']")
+    public static WebElement phoneNumb;
+    @FindBy(xpath = "//div[@class='css-1dbjc4n r-18u37iz']//input[@class='css-11aywtz r-13awgt0 r-t1w4ow r-ubezar r-majxgm r-135wba7 r-bcqeeo r-1ny4l3l r-10paoce r-13n6l4s']")
+    public static WebElement emailUser;
+    @FindBy(xpath = "//select[@class='r-30o5oe r-1niwhzg r-1yadl64 r-1p0dtai r-t1w4ow r-ubezar r-majxgm r-1pi2tsx r-1r74h94 r-135wba7 r-crgep1 r-orgf3d r-1ny4l3l r-10paoce r-u8s1d r-3mc0re r-ipm5af r-34rx7k r-417010']")
+    public static WebElement titleAdultDropdown;
+    @FindBy(xpath = "//div[@class='css-1dbjc4n r-tzxfm6']/div[@class='css-1dbjc4n r-mhe3cw']//div[@class='css-1dbjc4n r-1awozwy r-18u37iz r-1777fci r-edyy15']/div[@class='css-1dbjc4n r-14lw9ot r-kdyh1x r-rs99b7 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1wyyakw']")
+    public static WebElement fullnameDriver;
+    @FindBy(xpath = "//div[@class='css-1dbjc4n r-tzxfm6']/div[@class='css-1dbjc4n r-mhe3cw']//input[@class='css-11aywtz r-13awgt0 r-t1w4ow r-ubezar r-135wba7 r-bcqeeo r-1ny4l3l r-10paoce r-edyy15 r-13n6l4s']")
+    public static WebElement phoneNumbDriver;
+    @FindBy(xpath = "//div[@class='css-18t94o4 css-1dbjc4n r-kdyh1x r-1loqt21 r-10paoce r-1e081e0 r-5njf8e r-1otgn73 r-lrvibr']")
+    public static WebElement continueBtnBook;
+    @FindBy(xpath = "//div[@class='css-1dbjc4n r-14lw9ot r-kdyh1x r-1yos0t3 r-18u37iz r-1wtj0ep r-1udh08x r-nsbfu8']")
+    public static WebElement rentalReqBtn;
+    @FindBy(xpath = "//div[@class='css-1dbjc4n r-18u37iz r-1wtj0ep r-nsbfu8']")
+    public static WebElement closePopupRentalReq;
+    @FindBy(xpath = "//div[@class='css-18t94o4 css-1dbjc4n r-kdyh1x r-1loqt21 r-10paoce r-1e081e0 r-5njf8e r-1otgn73 r-lrvibr']")
+    public static WebElement continuetoPay;
+    @FindBy(xpath = "//div[.='ContinueContinue']")
+    public static WebElement closePopupConfirmToPay;
+    @FindBy(xpath = "//h1[@class='css-4rbku5 css-901oao r-t1w4ow r-1x35g6 r-b88u0q r-vrz42v r-764hgp r-fdjqy7']")
+    public static WebElement paymentPage;
 
     @FindBy(xpath = "//div[.='ProviderProvider']")
     public static WebElement aaa;
@@ -133,5 +154,35 @@ public class CarRentalPage {
     }
     public void setFullNameContDet() {
         fullNameContDet.click();
+    }
+    public void setPhoneNumb() {
+        phoneNumb.click();
+    }
+    public void setEmailUser() {
+        emailUser.click();
+    }
+    public void setTitleAdultDropdown() {
+        titleAdultDropdown.click();
+    }
+    public void setFullnameDriver() {
+        fullnameDriver.click();
+    }
+    public void setPhoneNumbDriver() {
+        phoneNumbDriver.click();
+    }
+    public void setContinueBtnBook() {
+        continueBtnBook.click();
+    }
+    public void setRentalReqBtn() {
+        rentalReqBtn.click();
+    }
+    public void setClosePopupRentalReq() {
+        closePopupRentalReq.click();
+    }
+    public void setClosePopupConfirmToPay() {
+        closePopupConfirmToPay.click();
+    }
+    public boolean paymentPageConf() {
+        return paymentPage.isDisplayed();
     }
 }

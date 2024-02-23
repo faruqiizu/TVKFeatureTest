@@ -92,10 +92,15 @@ public class CarRentalSteps {
 
     @And("User Fill Driver Details")
     public void userFillDriverDetails() {
+        carRentalPage.setTitleAdultDropdown();
+        carRentalPage.setFullnameDriver();
+        carRentalPage.setEmailUser();
+        carRentalPage.setPhoneNumb();
     }
 
     @Then("User Click Continue")
     public void userClickContinue() {
+        carRentalPage.setContinueBtnBook();
     }
 
     @And("User Add a special request is optional")
@@ -104,9 +109,13 @@ public class CarRentalSteps {
 
     @And("User Check all rental requirements")
     public void userCheckAllRentalRequirements() {
+        carRentalPage.setRentalReqBtn();
+        carRentalPage.setClosePopupRentalReq();
+        carRentalPage.setClosePopupConfirmToPay();
     }
 
     @And("User Select payment method and proceed payment")
     public void userSelectPaymentMethodAndProceedPayment() {
+        Assert.assertTrue(carRentalPage.paymentPageConf());
     }
 }
