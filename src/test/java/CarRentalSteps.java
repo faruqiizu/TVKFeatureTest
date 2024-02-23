@@ -65,10 +65,14 @@ public class CarRentalSteps {
 
     @And("User Select Pick-up Location in “Rental Office”")
     public void userSelectPickUpLocationInRentalOffice() {
+        Assert.assertTrue(carRentalPage.pickUpLoctRadioBtn());
+        carRentalPage.pickUpLoctRadioBtn();
+        carRentalPage.setPickUpLocationPlace();
     }
 
     @And("User Select Drop-off Location in “Other Location”")
     public void userSelectDropOffLocationInOtherLocation() {
+        carRentalPage.setDropOffLoct();
     }
 
     @And("User Input Pick-up or Drop-off notes is optional")
@@ -77,10 +81,13 @@ public class CarRentalSteps {
 
     @Then("User Click button Book Now")
     public void userClickButtonBookNow() {
+        carRentalPage.setContinueBtnProductDetail();
     }
 
     @And("User Fill Contact Details")
     public void userFillContactDetails() {
+        carRentalPage.setFullNameContDet();
+
     }
 
     @And("User Fill Driver Details")

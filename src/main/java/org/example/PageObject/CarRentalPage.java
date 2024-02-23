@@ -45,6 +45,24 @@ public class CarRentalPage {
     public static WebElement carProvideOption;
     @FindBy(xpath = "//div[@class='css-1dbjc4n r-1ihkh82 r-1q2s4rl r-ttdzmv']/div[@class='css-1dbjc4n r-150rngu r-eqz5dr r-16y2uox r-1wbh5a2 r-11yh6sk r-1rnoaur r-1sncvnh']/div[@class='css-1dbjc4n']/div[1]//div[@class='css-18t94o4 css-1dbjc4n r-kdyh1x r-1loqt21 r-10paoce r-1e081e0 r-5njf8e r-1otgn73 r-lrvibr']")
     public static WebElement continueBtn;
+    @FindBy(xpath = "//div[@class='css-1dbjc4n r-1awozwy r-1naam9t r-16uyjmq r-rs99b7 r-18yzcnr r-1777fci r-yc9v9c']/div[@class='css-1dbjc4n r-1naam9t r-1fuqb1j r-d045u9 r-1472mwg r-orgf3d r-u8s1d r-lrsllp']")
+    public static WebElement pickUpLoct;
+    @FindBy(xpath = "//div[@class='css-1dbjc4n r-14lw9ot r-kdyh1x r-b4qz5r r-1ifxtd0 r-nsbfu8 r-184en5c']//div[@class='css-1dbjc4n r-1awozwy r-1naam9t r-16uyjmq r-rs99b7 r-18yzcnr r-1777fci r-yc9v9c']/div[@class='css-1dbjc4n r-1naam9t r-1fuqb1j r-d045u9 r-1472mwg r-orgf3d r-u8s1d r-lrsllp']")
+    public static WebElement dropOffLoct;
+    @FindBy(xpath = "//div[@class='css-1dbjc4n r-1vjbqqu r-1q52ik8 r-qklmqi r-fu27ei r-rs99b7 r-1loqt21 r-kzbkwu r-1otgn73 r-1i6wzkk r-lrvibr']//div[@class='css-1dbjc4n r-13awgt0']")
+    public static WebElement pickUpLocationPlace;
+    @FindBy(xpath = "//div[@class='css-1dbjc4n r-1vjbqqu r-1q52ik8 r-qklmqi r-fu27ei r-rs99b7 r-1loqt21 r-kzbkwu r-1otgn73 r-1i6wzkk r-lrvibr']//div[@class='css-1dbjc4n r-13awgt0']")
+    public static WebElement dropOffLocationPlace;
+    @FindBy(xpath = "//div[@class='css-18t94o4 css-1dbjc4n r-kdyh1x r-1loqt21 r-10paoce r-5wp0in r-5njf8e r-1otgn73 r-lrvibr']")
+    public static WebElement continueBtnProductDetail;
+    @FindBy(xpath = "//h3[.='Contact Details (for E-ticket/Voucher)']")
+    public static WebElement contactDetailTitle;
+    @FindBy(xpath = "//div[@class='css-1dbjc4n r-tzxfm6']/div[@class='css-1dbjc4n']//div[@class='css-1dbjc4n r-mhe3cw']//div[@class='css-1dbjc4n r-14lw9ot r-kdyh1x r-rs99b7 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-1wyyakw']")
+    public static WebElement fullNameContDet;
+
+
+    @FindBy(xpath = "//div[.='ProviderProvider']")
+    public static WebElement aaa;
 
     //------------------------------------------------
     public boolean tvlLogo() {
@@ -94,5 +112,26 @@ public class CarRentalPage {
     }
     public void setContinueBtn() {
         continueBtn.click();
+    }
+    public boolean pickUpLoctRadioBtn() {
+        return pickUpLoct.isDisplayed();
+    }
+    public void setPickUpLoct() {
+        pickUpLoct.click();
+    }
+    public void setPickUpLocationPlace() {
+        pickUpLocationPlace.click();
+    }
+    public void setDropOffLoct() {
+        dropOffLoct.click();
+    }
+    public void setContinueBtnProductDetail() {
+        continueBtnProductDetail.click();
+    }
+    public boolean contDetailTitle() {
+        return contactDetailTitle.isDisplayed();
+    }
+    public void setFullNameContDet() {
+        fullNameContDet.click();
     }
 }
