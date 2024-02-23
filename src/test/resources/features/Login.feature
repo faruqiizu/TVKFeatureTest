@@ -1,4 +1,4 @@
-@SIHALALPTSP
+@TVKLogin
 Feature: User Login
   @UserLogin
   @Positive-case
