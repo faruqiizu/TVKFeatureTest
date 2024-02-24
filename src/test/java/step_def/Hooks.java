@@ -2,7 +2,10 @@ package step_def;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -23,7 +26,7 @@ public class Hooks {
         driver = new ChromeDriver(co);
         driverWait = new WebDriverWait(driver, 5);
 
-        String appUrl = "";
+        String appUrl = "https://www.traveloka.com/en-id";
         driver.get(appUrl);//fungsi untuk membuka link html
         driver.manage().window().maximize();//fungsi untuk memaximize browser
     }
@@ -32,5 +35,11 @@ public class Hooks {
     public void closeBrowser(){
         driver.quit();
     }
-
+    @After(order = 1)
+    public void tearDown(Scenario scenario){
+        if (scenario.isFailed()){
+            String screenShotName=scenario.getName().replaceAll("","_");
+            byte[] sourcePath=((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+        }
+    }
 }
